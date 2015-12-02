@@ -1,4 +1,14 @@
-﻿using UnityEngine;
+﻿// Files:			CharacterStatus.cs
+//
+// Author:			Sangbeom Yi
+// Description:		Common Character Status
+//
+// Revision History 11/11/2015 file created
+//
+//
+// Last Modified by	11/11/2015
+
+using UnityEngine;
 using System.Collections;
 
 public class CharacterStatus : MonoBehaviour {

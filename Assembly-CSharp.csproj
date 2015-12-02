@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{1AC735B5-049E-4FEE-02E4-9E4350137A1D}</ProjectGuid>
+	<ProjectGuid>{7C2CE287-A91C-0C84-5FF8-01756D1C80A8}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -50,11 +50,14 @@
      <Compile Include="Assets\_Scripts\CharaAnimation.cs" />
      <Compile Include="Assets\_Scripts\CharacterMove.cs" />
      <Compile Include="Assets\_Scripts\CharacterStatus.cs" />
+     <Compile Include="Assets\_Scripts\EnemyCtrl.cs" />
      <Compile Include="Assets\_Scripts\EnemyGeneratorCtrl.cs" />
      <Compile Include="Assets\_Scripts\FollowCamera.cs" />
+     <Compile Include="Assets\_Scripts\GameRuleCtrl.cs" />
      <Compile Include="Assets\_Scripts\HitArea.cs" />
      <Compile Include="Assets\_Scripts\InputManager.cs" />
      <Compile Include="Assets\_Scripts\PlayerCtrl.cs" />
+     <Compile Include="Assets\_Scripts\SearchArea.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

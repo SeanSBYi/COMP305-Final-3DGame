@@ -23,6 +23,8 @@ public class PlayerCtrl : MonoBehaviour {
 	private CharaAnimation charaAnimation;
 	private Transform attackTarget;
 
+	private GameRuleCtrl gameRuleCtrl;
+
 	// Player State.
 	enum PlayerState {
 		PlayerWalking,
@@ -36,9 +38,11 @@ public class PlayerCtrl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.inputManager = FindObjectOfType<InputManager>();
+		this.inputManager = FindObjectOfType<InputManager> ();
 		this.charaAnimation = GetComponent<CharaAnimation> ();
 		this.status = GetComponent<CharacterStatus> ();
+		this.gameRuleCtrl = FindObjectOfType<GameRuleCtrl> ();
+
 	}
 	
 	// Update is called once per frame
@@ -138,6 +142,7 @@ public class PlayerCtrl : MonoBehaviour {
 	void Died() {
 		// Die flag on.
 		this.status.died = true;
+		gameRuleCtrl.GameOver ();
 	}
 
 	// Calculate a Damage.
