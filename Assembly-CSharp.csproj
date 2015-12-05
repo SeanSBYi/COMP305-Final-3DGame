@@ -57,6 +57,7 @@
      <Compile Include="Assets\_Scripts\HitArea.cs" />
      <Compile Include="Assets\_Scripts\InputManager.cs" />
      <Compile Include="Assets\_Scripts\PlayerCtrl.cs" />
+     <Compile Include="Assets\_Scripts\SceneCtrl.cs" />
      <Compile Include="Assets\_Scripts\SearchArea.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

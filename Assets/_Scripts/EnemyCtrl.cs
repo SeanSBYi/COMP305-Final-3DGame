@@ -25,6 +25,8 @@ public class EnemyCtrl : MonoBehaviour {
     CharacterMove characterMove;
 	Transform attackTarget;
 
+	GameRuleCtrl gameRuleCtrl;
+
 	// Enemy State.
 	enum EnemyState {
         Walking,
@@ -38,7 +40,8 @@ public class EnemyCtrl : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-        status = GetComponent<CharacterStatus>();
+		this.gameRuleCtrl = FindObjectOfType<GameRuleCtrl> ();
+        this.status = GetComponent<CharacterStatus>();
         charaAnimation = GetComponent<CharaAnimation>();
     	characterMove = GetComponent<CharacterMove>(); 
    
@@ -150,6 +153,10 @@ public class EnemyCtrl : MonoBehaviour {
 		this.status.died = true;
         dropItem();
         Destroy(gameObject);
+
+		if( this.gameObject.tag == "Boss" ) { 
+			this.gameRuleCtrl.GameClear () ;
+		}
     }
 	
 	void Damage(AttackArea.AttackInfo attackInfo) {
