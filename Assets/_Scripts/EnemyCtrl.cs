@@ -17,6 +17,7 @@ public class EnemyCtrl : MonoBehaviour {
 	public float walkRange = 5.0f;
 	public Vector3 basePosition;
 	public GameObject[] dropItemPrefab;
+	public GameObject hitEffect;
 
 	// Private Instance Values.
 	private float waitTime;
@@ -160,6 +161,12 @@ public class EnemyCtrl : MonoBehaviour {
     }
 	
 	void Damage(AttackArea.AttackInfo attackInfo) {
+		// Effect.
+		GameObject effect = Instantiate (this.hitEffect, transform.position, Quaternion.identity) as GameObject;
+		effect.transform.localPosition = transform.position + new Vector3 (0.0f, 0.5f, 0.0f);
+		Destroy (effect, 0.3f);
+
+		// Calculate HP.
 		status.HP -= attackInfo.attackPower;
 
 		if (status.HP <= 0) {
