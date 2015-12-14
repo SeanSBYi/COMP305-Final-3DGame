@@ -1,17 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\EnemyCtrl.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs">
     <Files>
-      <File FileName="Assets\_Scripts\DropItem.cs" Line="24" Column="37" />
-      <File FileName="..\..\..\Downloads\006762-master\UNIDRA_DATA\ChapterProjects\Chapter11\Assets\Scripts\CharacterStatus.cs" Line="47" Column="3" />
-      <File FileName="Assets\_Scripts\CharacterStatus.cs" Line="39" Column="31" />
-      <File FileName="Assets\_Scripts\EnemyCtrl.cs" Line="152" Column="6" />
-      <File FileName="Assets\_Scripts\EnemyGeneratorCtrl.cs" Line="16" Column="3" />
+      <File FileName="..\2D_YRunner_Platformer_300857600\Assets\_Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="..\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs" Line="68" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\SB.Y\Desktop\GitHub\COMP305-Final-3DGame\Assets\_Scripts\PlayerCtrl.cs" line="150" />
+      <Breakpoint file="C:\Users\SB.Y\Desktop\GitHub\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs" line="113" />
+      <Breakpoint file="C:\Users\SB.Y\Desktop\GitHub\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs" line="111" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
