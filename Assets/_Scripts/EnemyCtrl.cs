@@ -28,6 +28,7 @@ public class EnemyCtrl : MonoBehaviour {
 
 	GameRuleCtrl gameRuleCtrl;
 
+
 	// Enemy State.
 	enum EnemyState {
         Walking,

@@ -50,6 +50,7 @@
      <Compile Include="Assets\_Scripts\CharaAnimation.cs" />
      <Compile Include="Assets\_Scripts\CharacterMove.cs" />
      <Compile Include="Assets\_Scripts\CharacterStatus.cs" />
+     <Compile Include="Assets\_Scripts\DropItem.cs" />
      <Compile Include="Assets\_Scripts\EnemyCtrl.cs" />
      <Compile Include="Assets\_Scripts\EnemyGeneratorCtrl.cs" />
      <Compile Include="Assets\_Scripts\FollowCamera.cs" />
