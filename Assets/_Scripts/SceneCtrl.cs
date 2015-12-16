@@ -16,6 +16,6 @@ public class SceneCtrl : MonoBehaviour {
 
 	public void OnClickStartGame() {
 		Debug.Log ("Click! Click!");
-		Application.LoadLevel ("MainScene");
+		Application.LoadLevel ("TownScene");
 	}
 }

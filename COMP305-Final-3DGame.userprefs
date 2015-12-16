@@ -1,15 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\SceneCtrlTown.cs">
     <Files>
-      <File FileName="..\2D_YRunner_Platformer_300857600\Assets\_Scripts\GameManager.cs" Line="1" Column="1" />
-      <File FileName="..\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs" Line="68" Column="43" />
+      <File FileName="Assets\_Scripts\PlayerCtrl.cs" Line="178" Column="13" />
+      <File FileName="Assets\_Scripts\EnemyCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\HitArea.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\AttackArea.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\SceneCtrl.cs" Line="19" Column="3" />
+      <File FileName="Assets\_Scripts\SceneCtrlTown.cs" Line="18" Column="36" />
+      <File FileName="Assets\_Scripts\GameRuleCtrl.cs" Line="16" Column="30" />
+      <File FileName="Assets\_Scripts\DropItem.cs" Line="12" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\SB.Y\Desktop\GitHub\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs" line="113" />
-      <Breakpoint file="C:\Users\SB.Y\Desktop\GitHub\2D_YRunner_Platformer_300857600\Assets\_Scripts\PlayerController.cs" line="111" />
+      <Breakpoint file="C:\Users\SB.Y\Desktop\GitHub\COMP305-Final-3DGame\Assets\_Scripts\EnemyCtrl.cs" line="171" />
+      <Breakpoint file="C:\Users\SB.Y\Desktop\GitHub\COMP305-Final-3DGame\Assets\_Scripts\HitArea.cs" line="17" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -25,6 +25,10 @@ public class PlayerCtrl : MonoBehaviour {
 
 	private GameRuleCtrl gameRuleCtrl;
 
+	// 
+	public float joystickSpeed = 2.0f;
+	FollowCamera followcamera;
+
 	// Player State.
 	enum PlayerState {
 		PlayerWalking,
@@ -92,6 +96,29 @@ public class PlayerCtrl : MonoBehaviour {
 
 	// If player is walking...
 	void Walking(){
+		if (followcamera == null) {
+			followcamera = FindObjectOfType<FollowCamera>();
+		}
+
+		Vector3 joyStick = Vector3.zero;
+		joyStick.x = Input.GetAxisRaw("Horizontal") * joystickSpeed;
+		joyStick.z = Input.GetAxisRaw("Vertical") * joystickSpeed;
+		if (joyStick.magnitude > 0) {
+			Debug.Log ("joystick Hori=" + joyStick.x + " Ver=" + joyStick.z);
+			// カメラの向きに合わせて移動方向を回転
+			if (followcamera != null) {
+				joyStick = Quaternion.Euler(0, followcamera.horizontalAngle, 0) * joyStick;
+			}
+			Vector3 position = transform.position;
+			position.x += joyStick.x;
+			position.z += joyStick.z;
+			SendMessage("SetDestination", position);
+			//targetCursor.SetPosition(position);
+		}
+
+		if (Input.GetKeyDown("space")) {
+			ChangePlayerState(PlayerState.PlayerAttacking);
+		}
 		if (inputManager.Clicked()) {
 			Vector2 clickPos = inputManager.GetCursorPosition();
 			Ray ray = Camera.main.ScreenPointToRay(clickPos);
@@ -125,8 +152,10 @@ public class PlayerCtrl : MonoBehaviour {
 		this.status.attacking = true;
 
 		// Change the direction to Enemy. (Normalize)
-		Vector3 targetDirection = (this.attackTarget.position - this.transform.position).normalized;
-		SendMessage ("SetDirection", targetDirection);
+		if (this.attackTarget != null) {
+			Vector3 targetDirection = (this.attackTarget.position - this.transform.position).normalized;
+			SendMessage ("SetDirection", targetDirection);
+		}
 
 		SendMessage ("StopMove");
 	}
