@@ -2,10 +2,20 @@
 using System.Collections;
 
 public class AttackAreaActivator : MonoBehaviour {
+	// PUBLIC INSTANCE VALUES.
+	public AudioClip attackSeClip;
+	AudioSource attackSeAudio;
+
 	Collider[] attackAreaColliders;
 
 	// Use this for initialization
 	void Start () {
+		// Audio Setting.
+		this.attackSeAudio = gameObject.AddComponent<AudioSource> ();
+		this.attackSeAudio.clip = attackSeClip;
+		this.attackSeAudio.loop = false;
+
+		// Collider Setting.
 		AttackArea[] attackAreas = GetComponentsInChildren<AttackArea>();
 		attackAreaColliders = new Collider[attackAreas.Length];
 		
@@ -18,6 +28,9 @@ public class AttackAreaActivator : MonoBehaviour {
 	void StartAttackHit() {
 		foreach (Collider attackAreaCollider in attackAreaColliders)
 			attackAreaCollider.enabled = true;
+
+		// Play Sound.
+		this.attackSeAudio.Play ();
 	}
 
 	void EndAttackHit() {

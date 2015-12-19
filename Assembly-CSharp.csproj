@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Import\DesertFortressPack\Scripts\open_door.cs" />
      <Compile Include="Assets\_Scripts\AttackArea.cs" />
      <Compile Include="Assets\_Scripts\AttackAreaActivator.cs" />
      <Compile Include="Assets\_Scripts\CharaAnimation.cs" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\_Scripts\EnemyGeneratorCtrl.cs" />
      <Compile Include="Assets\_Scripts\FollowCamera.cs" />
      <Compile Include="Assets\_Scripts\GameRuleCtrl.cs" />
+     <Compile Include="Assets\_Scripts\GameRuleCtrlSt2.cs" />
      <Compile Include="Assets\_Scripts\HitArea.cs" />
      <Compile Include="Assets\_Scripts\InputManager.cs" />
      <Compile Include="Assets\_Scripts\PlayerCtrl.cs" />
@@ -64,6 +66,7 @@
      <Compile Include="Assets\_Scripts\SimpleTempScript.cs" />
      <None Include="Assets\_Import\Fantasy Enemy Pack 01\Mushroom Monster\Read me.txt" />
      <None Include="Assets\_Import\Fantasy Enemy Pack 01\Crawling Bug\Read me.txt" />
+     <None Include="Assets\_Import\Standard Assets\Tessellation Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\_Import\Fantasy Enemy Pack 01\Masked Orc\Read Me.txt" />
      <None Include="Assets\_Import\trees_fantasy_2\readme.txt" />
      <None Include="Assets\_Import\Fantasy Enemy Pack 01\Magma Demon\Read me.txt" />

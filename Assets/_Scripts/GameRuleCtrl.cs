@@ -18,29 +18,51 @@ public class GameRuleCtrl : MonoBehaviour {
 	public RawImage rawClear;
 	public RawImage rawGameOver;
 
-	//private AudioSource[] _audioSources;
-	public AudioSource gameOverAudioSource;
-	public AudioSource gameWinAudioSource;
+	private AudioSource[] _audioSources;
+	private AudioSource gameOverAudioSource;
+	private AudioSource gameWinAudioSource;
 
 	// Private Instance Values.
 	private int dataScore;
 	private int dataTimer;
 
+	private string loadLevelName;
+
 
 	// Use this for initialization
 	void Start () {
+		this._audioSources = gameObject.GetComponents<AudioSource> ();
+		this.gameWinAudioSource = this._audioSources[0];
+		this.gameOverAudioSource = this._audioSources [1];
+
 		this.rawClear.enabled = false;
 		this.rawGameOver.enabled = false;
 
 		this.dataScore = 0;
+
+		if (Application.loadedLevelName == "Stage1") {
+			loadLevelName = "Stage2";
+		} else if (Application.loadedLevelName == "Stage2") {
+			loadLevelName = "Stage3";
+		} else {
+			loadLevelName = "TitleScene";
+		}
 	}
 
 	// Update is called once per frame
 	void Update(){
-		if (this.gameOver == true || this.gameClear == true) {
+		if (this.gameOver == true) {
 			this.sceneChangeTime -= Time.deltaTime;
 			if (this.sceneChangeTime <= 0.0f) {
 				Application.LoadLevel ("TitleScene");
+			}
+			return;
+		}
+
+		if (this.gameClear == true) {
+			this.sceneChangeTime -= Time.deltaTime;
+			if (this.sceneChangeTime <= 0.0f) {
+				Application.LoadLevel (loadLevelName);
 			}
 			return;
 		}
@@ -74,11 +96,15 @@ public class GameRuleCtrl : MonoBehaviour {
     }
 
 	public void UpdatePlayerHP(int _HP) {
-		this.playerHP.text = "HP <color=#ff0000>" + _HP.ToString () + "</color>";
+		if (this.playerHP != null) {
+			this.playerHP.text = "HP <color=#ff0000>" + _HP.ToString () + "</color>";
+		}
 	}
 
 	public void UpdatePlayerScore(int _Score) {
-		this.dataScore += _Score;
-		this.playerScore.text = "Score <color=#0000ff>" + this.dataScore.ToString () + "</color>";
+		if (this.playerScore != null) {
+			this.dataScore += _Score;
+			this.playerScore.text = "Score <color=#0000ff>" + this.dataScore.ToString () + "</color>";
+		}
 	}
 }

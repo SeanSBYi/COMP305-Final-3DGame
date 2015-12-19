@@ -1,14 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\GameRuleCtrl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\PlayerCtrl.cs">
     <Files>
-      <File FileName="Assets\_Scripts\GameRuleCtrl.cs" Line="77" Column="43" />
-      <File FileName="Assets\_Scripts\PlayerCtrl.cs" Line="50" Column="53" />
-      <File FileName="Assets\_Scripts\EnemyCtrl.cs" Line="159" Column="44" />
+      <File FileName="Assets\_Scripts\GameRuleCtrl.cs" Line="48" Column="33" />
+      <File FileName="Assets\_Scripts\PlayerCtrl.cs" Line="50" Column="1" />
+      <File FileName="Assets\_Scripts\EnemyCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\DropItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\SceneCtrlTown.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\GameRuleCtrlSt2.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\_Scripts\GameRuleCtrl.cs" line="32" offsetX="613" offsetY="527" expression="this._audioSources[0]" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
