@@ -15,5 +15,8 @@ public class HitArea : MonoBehaviour {
 
 	void Damage(AttackArea.AttackInfo attackInfo) {
 		transform.root.SendMessage ("Damage",attackInfo);
+		if (transform.root.tag == "Boss") {
+			transform.root.gameObject.SendMessage ("Damage", attackInfo);
+		}
 	}
 }

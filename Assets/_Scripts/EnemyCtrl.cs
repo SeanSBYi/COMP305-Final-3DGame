@@ -156,17 +156,21 @@ public class EnemyCtrl : MonoBehaviour {
         dropItem();
         Destroy(gameObject);
 
+		this.gameRuleCtrl.UpdatePlayerScore (10);
+
 		if( this.gameObject.tag == "Boss" ) { 
 			this.gameRuleCtrl.GameClear () ;
 		}
     }
 	
 	void Damage(AttackArea.AttackInfo attackInfo) {
-		// Effect.
-		GameObject effect = Instantiate (this.hitEffect, transform.position, Quaternion.identity) as GameObject;
-		effect.transform.localPosition = transform.position + new Vector3 (0.0f, 0.5f, 0.0f);
-		Destroy (effect, 0.3f);
 
+		if( this.hitEffect != null ) {
+			// Effect.
+			GameObject effect = Instantiate (this.hitEffect, transform.position, Quaternion.identity) as GameObject;
+			effect.transform.localPosition = transform.position + new Vector3 (0.0f, 0.5f, 0.0f);
+			Destroy (effect, 0.3f);
+		}
 		// Calculate HP.
 		status.HP -= attackInfo.attackPower;
 

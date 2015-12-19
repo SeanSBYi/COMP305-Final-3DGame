@@ -47,6 +47,8 @@ public class PlayerCtrl : MonoBehaviour {
 		this.status = GetComponent<CharacterStatus> ();
 		this.gameRuleCtrl = FindObjectOfType<GameRuleCtrl> ();
 
+		this.gameRuleCtrl.UpdatePlayerHP (this.status.HP);
+
 	}
 	
 	// Update is called once per frame
@@ -178,8 +180,12 @@ public class PlayerCtrl : MonoBehaviour {
 	void Damage( AttackArea.AttackInfo attackInfo ) {
 		this.status.HP -= attackInfo.attackPower;
 
-		if( this.status.HP <= 0 ) {
+		if (this.status.HP <= 0) {
 			this.status.HP = 0;
+		}
+		this.gameRuleCtrl.UpdatePlayerHP (this.status.HP);
+
+		if( this.status.HP == 0 ) {
 			this.ChangePlayerState( PlayerState.PlayerDied );
 		}
 	}

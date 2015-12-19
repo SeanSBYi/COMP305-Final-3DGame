@@ -15,6 +15,6 @@ public class SceneCtrlTown : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		Debug.Log ("Enter!");
-		Application.LoadLevel ("MainScene");
+		Application.LoadLevel ("Stage1");
 	}
 }

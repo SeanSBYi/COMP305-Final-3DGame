@@ -61,11 +61,27 @@
      <Compile Include="Assets\_Scripts\SceneCtrl.cs" />
      <Compile Include="Assets\_Scripts\SceneCtrlTown.cs" />
      <Compile Include="Assets\_Scripts\SearchArea.cs" />
+     <Compile Include="Assets\_Scripts\SimpleTempScript.cs" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Mushroom Monster\Read me.txt" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Crawling Bug\Read me.txt" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Masked Orc\Read Me.txt" />
+     <None Include="Assets\_Import\trees_fantasy_2\readme.txt" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Magma Demon\Read me.txt" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Plant Monster\Read me.txt" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Monster Cat Bat\Read me.txt" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Flower Monster\Read me.txt" />
+     <None Include="Assets\_Import\Fantasy Enemy Pack 01\Monster Hornet\Read me.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
